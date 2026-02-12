@@ -27,12 +27,14 @@ menuCloseButton.addEventListener("click", toggleNavbarMenu);
 
 tabHeaders.forEach((tabHeader, index) => {
   tabHeader.addEventListener("click", (e) => {
-    tabHeaders.forEach((tabHeader) => {
-      tabHeader.classList.remove("active");
+    tabHeaders.forEach((header) => {
+      header.classList.remove("active");
+      header.setAttribute("aria-selected", "false");
     });
 
     const clickedTab = e.currentTarget;
     clickedTab.classList.add("active");
+    clickedTab.setAttribute("aria-selected", "true");
 
     tabItems.forEach((tabItem) => {
       tabItem.classList.add("hidden");
@@ -45,7 +47,9 @@ tabHeaders.forEach((tabHeader, index) => {
 accordionButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const clickedButton = e.currentTarget;
+    const isExpanded = clickedButton.getAttribute("aria-expanded") === "true";
 
+    clickedButton.setAttribute("aria-expanded", !isExpanded);
     clickedButton.closest(".accordion-item").classList.toggle("active");
   });
 });

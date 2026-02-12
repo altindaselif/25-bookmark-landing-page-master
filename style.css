@@ -285,7 +285,10 @@ img {
   padding: 1.6rem 3.2rem;
   border-bottom: 0.1rem solid rgba(73, 93, 207, 0.2);
   width: 100%;
-  transition: all 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease,
+    border-bottom 0.3s ease;
 }
 
 .tab-header:hover {
@@ -306,10 +309,10 @@ img {
   background-color: var(--blue-600);
   border-radius: 0 20rem 20rem 0;
 
-  width: 65rem;
-  height: 33rem;
-  top: 21rem;
-  left: -16.7rem;
+  width: 85vw;
+  height: 20rem;
+  top: 25.5rem;
+  left: calc(50% - 50vw);
 }
 
 .tab-img {
@@ -516,6 +519,7 @@ img {
 }
 
 .faq-info-button {
+  display: inline-block;
   margin-top: 5.6rem;
 }
 /* --- MAIN PART (FAQ SECTION) --- */
