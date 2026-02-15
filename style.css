@@ -309,10 +309,10 @@ img {
   background-color: var(--blue-600);
   border-radius: 0 20rem 20rem 0;
 
-  width: 85vw;
-  height: 20rem;
-  top: 25.5rem;
-  left: calc(50% - 50vw);
+  width: 65rem;
+  height: 33rem;
+  top: 21rem;
+  left: -16.7rem;
 }
 
 .tab-img {
